@@ -4,8 +4,8 @@ import RenderCustomers from "./RenderCustomers";
 function CustomersList(customers) {
     return(
         <>
-        <div class="customers-table">
-            <table class="customers-table">
+        <div style={{ alignContent: "center", alignItems: "center", width: "100%"}}>
+            <table class="customers-table" style={{ alignContent: "center", alignItems: "center", justifyContent: "space-between", width: "100%", textAlign: "center"}}>
                 <thead>
                     <tr>
                         <th>Name</th>

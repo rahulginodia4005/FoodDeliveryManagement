@@ -57,22 +57,24 @@ function Orders() {
 
 
   return(
-    <div class="orders">
-    <Sidebar />
-    <Header />
-    <div className="order-management" onClick={getOrders}>
-        <div className="order-form-container">
-        <OrderForm restaurants={restaurants}/>
-        <UpdateOrderForm />
-        <DeleteOrder />
-        </div>
-        <div className="order-list-container">
-        <OrderList returnedOrders={returnedOrders}
-        />
-        </div>
-    </div>
-    <Footer />
-    </div>
+    <>
+      <div class="orders">
+      <Sidebar />
+      <Header />
+      <div className="order-management" onClick={getOrders}>
+          <div className="order-form-container">
+          <OrderForm restaurants={restaurants}/>
+          <UpdateOrderForm />
+          <DeleteOrder />
+          </div>
+          <div className="order-list-container">
+          <OrderList returnedOrders={returnedOrders}
+          />
+          </div>
+      </div>
+      </div>
+      <Footer />
+    </>
   )
 }
 

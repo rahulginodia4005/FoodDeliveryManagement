@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PersonnelForm from "./PersonnelForm";
 import PersonnelList from "./PersonnelList";
 import Header from "../Utility/Header";
@@ -21,20 +21,27 @@ function Personnel() {
     }
 
   return(
-    <div className="personnels">
-    <Sidebar />
-    <Header />
-    <div className="order-management" onClick={getPersonnels}>
-        <h2></h2>
-        <div className="order-form-container">
-        <PersonnelForm/>
+    <>
+        <div class="personnels">
+        <Sidebar />
+        <Header />
+        <div className="order-management" onClick={getPersonnels}>
+            <h2 style={{fontWeight: "bolder"}}>Personnels</h2>
+            <br/>
+            <div className="order-form-container">
+            <PersonnelForm/>
+            </div>
+            <br/>
+            <br/>
+            <div className="order-list-containe">
+            <h2 style={{"textAlign" : "center",fontWeight: "bolder"}} class="font-extrabold">Customers List</h2>
+            <br/>
+            <PersonnelList returnedPersonnel={returnedPersonnels} />
+            </div>
         </div>
-        <div className="order-list-containe">
-        <PersonnelList returnedPersonnel={returnedPersonnels} />
         </div>
-    </div>
-    <Footer />
-    </div>
+        <Footer />
+    </>
   )
 }
 

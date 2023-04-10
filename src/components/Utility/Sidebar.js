@@ -17,13 +17,18 @@ function Sidebar({ orders, updateOrder, deleteOrder }) {
             
 
             <div class="sidebar">
-            <ul>
+            {/* <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/orders">Orders</a></li>
                 <li><a href="/restaurants">Restaurants</a></li>
                 <li><a href="/personnels">Delivery Personnel</a></li>
                 <li><a href="/customers">Customers</a></li>
-            </ul>
+            </ul> */}
+            <a href="/">Home</a>
+            <a href="/orders">Orders</a>
+            <a href="/restaurants">Restaurants</a>
+            <a href="/personnels">Delivery Personnels</a>
+            <a href="/customers">Customers</a>
             </div>
 
             <div class="main-content">

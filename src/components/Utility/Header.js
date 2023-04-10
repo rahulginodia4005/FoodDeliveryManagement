@@ -3,7 +3,8 @@ import React from "react";
 function Header() {
   return (
     <header>
-      <h1>Food Delivery Management</h1>
+      <h1 class="header-class" style={{"fontWeight" : "bolder"}}>Food Delivery Management</h1>
+      <br></br>
     </header>
   );
 }

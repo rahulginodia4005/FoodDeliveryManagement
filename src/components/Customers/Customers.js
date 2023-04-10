@@ -47,6 +47,9 @@ function Customers() {
             <div class="customers" onClick={getCustomers}>
                 <Sidebar />
                 <Header />
+                <h2 style={{fontWeight: "bolder"}}>Customers</h2>
+                <br></br>
+                <br></br>
                 <form onSubmit={handleSubmit}>
                     <input 
                     name="Name"
@@ -64,10 +67,11 @@ function Customers() {
                 </form>
                 <br></br>
                 <br></br>
-                <h2 style={{"textAlign" : "center"}} class="font-extrabold">Customers List</h2>
+                <h2 style={{"textAlign" : "center", fontWeight: "bold"}} class="font-extrabold">Customers List</h2>
+                <br/>
                 <CustomersList customers={returnedCustomers} />
-                <Footer />
             </div>
+            <Footer />
         </>
     )
 }

@@ -3,6 +3,7 @@ import Sidebar from "../Utility/Sidebar";
 import Footer from "../Utility/Footer";
 import NewRestaurant from "./NewRestaurant";
 import RenderRestaurants from "./RenderRestaurants";
+import Header from "../Utility/Header";
 // import RestScript from "./RestScript";
 
 function Restaurants() {
@@ -26,10 +27,14 @@ function Restaurants() {
     return(
         <>
             <div class="restaurants" onClick={getRestaurants}>
+                <Header />
                 <Sidebar />
+                <h2 style={{fontWeight: "bolder"}}>Restaurants</h2>
+                <br/>
                 <NewRestaurant getRestaurants={getRestaurants}/>
+                <br/>
                 <section>
-                    <h2 style={{textAlign: "center"}}>Restaurants List</h2>
+                    <h2 style={{textAlign: "center", fontWeight: "bold"}}>Restaurants List</h2>
                     <RenderRestaurants restaurants={restaurants}/>
                 </section>
                 {/* <script src={RestScript} /> */}

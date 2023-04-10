@@ -38,44 +38,6 @@ function NewRestaurant(getRestaurants) {
         
     }
 
-    const AddItems = (e) => {
-        e.preventDefault();
-        console.log(e.target);
-        const data = new FormData(e.target);
-        const form = Object.fromEntries(data.entries());
-        if(number >= 1) {
-            setRestaurant({
-                ...restaurant,
-                Items: [...restaurant.Items, form.item1]
-            })
-        }
-        if(number >= 2) {
-            setRestaurant({
-                ...restaurant,
-                Items: [...restaurant.Items, form.item2]
-            })
-        }
-        if(number >= 3) {
-            setRestaurant({
-                ...restaurant,
-                Items: [...restaurant.Items, form.item3]
-            })
-        }
-        if(number >= 4) {
-            setRestaurant({
-                ...restaurant,
-                Items: [...restaurant.Items, form.item4]
-            })
-        }
-        if(number >= 5) {
-            setRestaurant({
-                ...restaurant,
-                Items: [...restaurant.Items, form.item5]
-            })
-        }
-        console.log(restaurant);
-        return false;
-    }
 
     const handleSubmit = async (event) => {
         // console.log(orderInput);
@@ -105,31 +67,31 @@ function NewRestaurant(getRestaurants) {
 
       const handleSubmit2 = (e) => {
         e.preventDefault();
-        if(number == 1) {
+        if(number === 1) {
             setRestaurant({
                 ...restaurant,
                 Items: [item1]
             })
         }
-        if(number == 2) {
+        if(number === 2) {
             setRestaurant({
                 ...restaurant,
                 Items: [item1, item2]
             })
         }
-        if(number == 3) {
+        if(number === 3) {
             setRestaurant({
                 ...restaurant,
                 Items: [item1, item2, item3]
             })
         }
-        if(number == 4) {
+        if(number === 4) {
             setRestaurant({
                 ...restaurant,
                 Items: [item1, item2, item3, item4]
             })
         }
-        if(number == 5) {
+        if(number === 5) {
             setRestaurant({
                 ...restaurant,
                 Items: [item1, item2, item3, item4, item5]
@@ -158,6 +120,7 @@ function NewRestaurant(getRestaurants) {
                 required
                 ></input>
                 <select name="number" onChange={setInput}>
+                    <option disabled selected>Number of Items</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
