@@ -108,12 +108,4 @@ app.post('/getMenuItems', async (req, res) => {
     res.send(result);
 })
 
-
-// let Pam = new Employee(1002, 'Pam', 'Beesly', 30);
-// dbOperation.createEmployee(Pam);
-
-// dbOperation.getEmployees().then(res => {
-//     console.log(res);
-// })
-
 app.listen(API_PORT, () => console.log(`Listening on port ${API_PORT}`));
