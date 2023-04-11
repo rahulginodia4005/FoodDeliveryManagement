@@ -45,7 +45,7 @@ function UpdateOrderForm() {
 
     return (
         <div className="order-form">
-      <h2>Update Order</h2>
+      <h2 style={{fontWeight: "bold"}}>Update Order</h2>
       <form method="POST" onSubmit={handleSubmit}>
         <div className="form-group">
           <label>OrderID:</label>

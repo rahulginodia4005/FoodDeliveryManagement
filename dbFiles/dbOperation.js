@@ -171,7 +171,8 @@ const addPersonnel = async (newPersonnel, personnelID) => {
                 ${personnelID},
                 '${newPersonnel.Name}',
                 '${newPersonnel.Phone}',
-                ''
+                '',
+                NULL
             )`
         )
     }

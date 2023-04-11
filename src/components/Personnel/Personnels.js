@@ -22,10 +22,10 @@ function Personnel() {
 
   return(
     <>
-        <div class="personnels">
+        <div class="personnels" onClick={getPersonnels}>
         <Sidebar />
         <Header />
-        <div className="order-management" onClick={getPersonnels}>
+        <div className="order-management" >
             <h2 style={{fontWeight: "bolder"}}>Personnels</h2>
             <br/>
             <div className="order-form-container">
@@ -34,7 +34,7 @@ function Personnel() {
             <br/>
             <br/>
             <div className="order-list-containe">
-            <h2 style={{"textAlign" : "center",fontWeight: "bolder"}} class="font-extrabold">Customers List</h2>
+            <h2 style={{"textAlign" : "center",fontWeight: "bolder"}} class="font-extrabold">Personnels List</h2>
             <br/>
             <PersonnelList returnedPersonnel={returnedPersonnels} />
             </div>

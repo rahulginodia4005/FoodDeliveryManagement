@@ -67,31 +67,31 @@ function NewRestaurant(getRestaurants) {
 
       const handleSubmit2 = (e) => {
         e.preventDefault();
-        if(number === 1) {
+        if(number == 1) {
             setRestaurant({
                 ...restaurant,
                 Items: [item1]
             })
         }
-        if(number === 2) {
+        if(number == 2) {
             setRestaurant({
                 ...restaurant,
                 Items: [item1, item2]
             })
         }
-        if(number === 3) {
+        if(number == 3) {
             setRestaurant({
                 ...restaurant,
                 Items: [item1, item2, item3]
             })
         }
-        if(number === 4) {
+        if(number == 4) {
             setRestaurant({
                 ...restaurant,
                 Items: [item1, item2, item3, item4]
             })
         }
-        if(number === 5) {
+        if(number == 5) {
             setRestaurant({
                 ...restaurant,
                 Items: [item1, item2, item3, item4, item5]
@@ -127,14 +127,14 @@ function NewRestaurant(getRestaurants) {
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <form class="my-2" onSubmit="return false">
+                <form class="my-2">
     
                     <input name="item1" style={{"display" : (number) >= 1 ? "" : "none"}} onChange={setInput}></input>
                     <input name="item2" style={{"display" : (number) >= 2 ? "" : "none"}} onChange={setInput}></input>
                     <input name="item3" style={{"display" : (number) >= 3 ? "" : "none"}} onChange={setInput}></input>
                     <input name="item4" style={{"display" : (number) >= 4 ? "" : "none"}} onChange={setInput}></input>
                     <input name="item5" style={{"display" : (number) >= 5 ? "" : "none"}} onChange={setInput}></input>
-                    <button type="submit" class="button" style={{"color" : 'white'}} onClick={handleSubmit2}>Add Items</button>
+                    <button class="button" style={{"color" : 'white'}} onClick={handleSubmit2}>Add Items</button>
 
                 </form>
                 <button type="submit" class="button" style={{"color" : "white"}}>Add Restaurant</button>

@@ -13,17 +13,24 @@ function OrderForm({restaurants}) {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify(orderInput),
+      body: JSON.stringify({
+        ...orderInput
+      }),
     })
     .then(res => res.json());
     setItems(receivedItems.recordsets[0]);
   };
 
-  const setRestaurant = (event) => {
+  const setRestaurant = (e) => {
     console.log('hellllllllfavsvsv');
     setOrderInput({
-      ...orderInput,
-      ["Restaurant"]: event.target.value
+      Name: orderInput.Name,
+      Phone: orderInput.Phone,
+      Restaurant: e.target.value,
+      Address: orderInput.Address,
+      Value: orderInput.Value,
+      Status: orderInput.Status,
+      Details: orderInput.Details
     })
     console.log(orderInput.Restaurant);
     getItems();
@@ -37,7 +44,7 @@ function OrderForm({restaurants}) {
     setOrderInput({
       Name: form.Name,
       Phone: form.Phone,
-      Restaurant: form.Restaurant,
+      Restaurant: orderInput.Restaurant,
       Address: form.Address,
       Value: parseInt(form.Value),
       Status: form.Status,
@@ -62,8 +69,8 @@ function OrderForm({restaurants}) {
   // });
 
   return (
-    <div className="order-form">
-      <h2>New Order</h2>
+    <div className="order-form" onClick={getItems}>
+      <h2 style={{fontWeight: "bold"}}>New Order</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Name:</label>
@@ -84,18 +91,21 @@ function OrderForm({restaurants}) {
         </div>
         <div className="form-group">
           <label htmlFor="restaurant">Restaurant Name:</label>
-          <select id="restaurant" name="Restaurant" onClick={setRestaurant}>
+          <select id="restaurant" name="Restaurant" onChange={setRestaurant}>
+            <option disabled selected>Choose Restaurant</option>
           <RenderRestaurants restaurants={restaurants}/>
           </select>
         </div>
         <div className="form-group">
           <label htmlFor="Details">Item Name:</label>
           <select id="Details" name="Details">
+            <option disabled selected>Choose Item</option>
             <RenderMenuItems items={items} />
           </select>
         </div>
         <div className="form-group">
-          <label htmlFor="value">Value:</label>
+          <label htmlFor="value">Price:</label>
+          {/* <span name="Value" style={{backgroundColor: "white", padding: "5px", marginLeft: "15px", borderRadius: "5px"}}>100</span> */}
           <input
             name="Value"
             required

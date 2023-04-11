@@ -27,7 +27,7 @@ function DeleteOrderForm() {
 
     return (
         <div className="order-form">
-      <h2>Delete Order</h2>
+      <h2 style={{fontWeight: "bold"}}>Delete Order</h2>
       <form method="POST" onSubmit={handleSubmit}>
         <div className="form-group">
           <label>OrderID:</label>
